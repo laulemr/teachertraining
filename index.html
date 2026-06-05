@@ -2,29 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>First Day Teacher Training</title>
+  <title>First Day Teacher Training · Thoughtful Class Recommendations</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="app">
     <header class="hero">
-      <h1>First Day Teacher Training</h1>
-      <p class="tagline">Three students. Five minutes.<br>Ask the right questions, make the right moves.</p>
+      <h1>Welcome to Your First Day</h1>
+      <p class="tagline">
+        Three students. Five minutes.<br>
+        Ask the right questions, make the right moves.
+      </p>
+      <p class="intro">
+        You’re at the door of your classroom for the first day of school — greeting students, reading the room, 
+        and making the thoughtful decisions that turn nervous new faces into your first regulars.
+      </p>
       <button id="startBtn" class="primary-btn">Prepare for class</button>
-      <p class="module-label">MODULE 01 · FIRST DAY OF CLASS</p>
+      <p class="module-label">FIRST DAY TEACHER TRAINING · MODULE 01 OF 01</p>
     </header>
 
-    <section id="scenarioSection" class="scenario hidden">
-      <div id="scenarioText" class="scenario-text"></div>
-      <div id="choicesContainer" class="choices"></div>
-      <button id="nextBtn" class="secondary-btn hidden">Next</button>
+    <section id="gameSection" class="hidden">
+      <div id="statusBar" class="status-bar">
+        <span id="studentCounter"></span>
+        <span id="phaseLabel"></span>
+      </div>
+
+      <section id="studentCard" class="card hidden">
+        <h2 id="studentName"></h2>
+        <p id="studentRole" class="student-role"></p>
+        <p id="studentDescription"></p>
+        <ul id="studentObservations" class="observations"></ul>
+      </section>
+
+      <section id="questionSection" class="card hidden">
+        <h3>What do you ask first?</h3>
+        <div id="questionChoices" class="choices"></div>
+      </section>
+
+      <section id="moveSection" class="card hidden">
+        <h3>Your first-day move</h3>
+        <p id="movePrompt"></p>
+        <div id="moveChoices" class="choices"></div>
+      </section>
+
+      <section id="feedbackSection" class="card hidden">
+        <h3>How that played out</h3>
+        <p id="feedbackSummary"></p>
+        <ul id="feedbackDetails" class="feedback-list"></ul>
+        <button id="nextStudentBtn" class="secondary-btn">Next student</button>
+      </section>
     </section>
 
-    <section id="resultsSection" class="results hidden">
-      <h2>Debrief</h2>
-      <div id="resultsText"></div>
-      <button id="restartBtn" class="primary-btn">Try again</button>
+    <section id="finalSection" class="card hidden">
+      <h2>Shift debrief</h2>
+      <p id="finalSummary"></p>
+      <ul id="finalHighlights"></ul>
+      <button id="restartBtn" class="primary-btn">Run the first day again</button>
     </section>
   </main>
 
