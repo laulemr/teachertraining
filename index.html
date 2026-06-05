@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>First Day Teacher Training</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <h1>First Day Teacher Training</h1>
+      <p class="tagline">Three students. Five minutes.<br>Ask the right questions, make the right moves.</p>
+      <button id="startBtn" class="primary-btn">Prepare for class</button>
+      <p class="module-label">MODULE 01 · FIRST DAY OF CLASS</p>
+    </header>
+
+    <section id="scenarioSection" class="scenario hidden">
+      <div id="scenarioText" class="scenario-text"></div>
+      <div id="choicesContainer" class="choices"></div>
+      <button id="nextBtn" class="secondary-btn hidden">Next</button>
+    </section>
+
+    <section id="resultsSection" class="results hidden">
+      <h2>Debrief</h2>
+      <div id="resultsText"></div>
+      <button id="restartBtn" class="primary-btn">Try again</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
